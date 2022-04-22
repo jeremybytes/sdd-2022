@@ -50,4 +50,9 @@ public class RetryReader : IPersonReader
             return await this.GetPerson(id);
         }
     }
+
+    public string GetTypeName()
+    {
+        return $"{this.GetType().Name} ({_wrappedReader.GetTypeName()})";
+    }
 }

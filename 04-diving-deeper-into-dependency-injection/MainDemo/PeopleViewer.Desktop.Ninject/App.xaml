@@ -1,7 +1,7 @@
-﻿<Application x:Class="PeopleViewer.Ninject.App"
+﻿<Application x:Class="PeopleViewer.Desktop.Ninject.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:PeopleViewer.Ninject"
+             xmlns:local="clr-namespace:PeopleViewer.Desktop.Ninject"
              >
     <Application.Resources>
         <!-- Value Converters -->

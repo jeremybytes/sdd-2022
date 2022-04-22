@@ -1,7 +1,7 @@
 ﻿using System.Windows.Data;
 using System.Windows.Media;
 
-namespace PeopleViewer;
+namespace PeopleViewer.Desktop;
 
 public class DecadeConverter : IValueConverter
 {

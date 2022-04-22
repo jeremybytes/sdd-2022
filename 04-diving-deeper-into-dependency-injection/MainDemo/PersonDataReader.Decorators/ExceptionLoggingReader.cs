@@ -40,4 +40,9 @@ public class ExceptionLoggingReader : IPersonReader
             throw;
         }
     }
+
+    public string GetTypeName()
+    {
+        return $"{this.GetType().Name} ({_wrappedReader.GetTypeName()})";
+    }
 }

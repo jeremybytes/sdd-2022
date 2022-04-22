@@ -68,4 +68,9 @@ public class CachingReader : IPersonReader
     {
         _dataDateTime = DateTime.MinValue;
     }
+
+    public string GetTypeName()
+    {
+        return $"{this.GetType().Name} ({_wrappedReader.GetTypeName()})";
+    }
 }

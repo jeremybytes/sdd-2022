@@ -7,7 +7,7 @@ using PersonDataReader.Service;
 using PersonDataReader.SQL;
 using System.Windows;
 
-namespace PeopleViewer.Ninject;
+namespace PeopleViewer.Desktop.Ninject;
 
 public partial class App : Application
 {

@@ -6,7 +6,7 @@ using PersonDataReader.Service;
 using PersonDataReader.SQL;
 using System.Windows;
 
-namespace PeopleViewer;
+namespace PeopleViewer.Desktop;
 
 public partial class App : Application
 {

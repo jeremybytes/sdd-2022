@@ -11,15 +11,15 @@ public class SQLReaderProxy : IPersonReader
         this.sqlFileName = sqlFileName;
     }
 
-    public Task<IReadOnlyCollection<Person>> GetPeople()
+    public async Task<IReadOnlyCollection<Person>> GetPeople()
     {
         using var reader = new SQLReader(sqlFileName);
-        return reader.GetPeople();
+        return await reader.GetPeople();
     }
 
-    public Task<Person?> GetPerson(int id)
+    public async Task<Person?> GetPerson(int id)
     {
         using var reader = new SQLReader(sqlFileName);
-        return reader.GetPerson(id);
+        return await reader.GetPerson(id);
     }
 }
