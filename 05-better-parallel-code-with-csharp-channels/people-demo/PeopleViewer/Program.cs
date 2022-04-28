@@ -75,6 +75,14 @@ class Program
 
     static async Task ShowData(ChannelReader<Person> reader)
     {
+        //while (await reader.WaitToReadAsync())
+        //{
+        //    while (reader.TryRead(out Person? person))
+        //    {
+        //        DisplayPerson(person);
+        //    }
+        //}
+
         await foreach (var person in reader.ReadAllAsync())
         {
             DisplayPerson(person);
