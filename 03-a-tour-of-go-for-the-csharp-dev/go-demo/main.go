@@ -5,49 +5,52 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 	"sync"
 	"time"
 )
 
 func main() {
 	start := time.Now()
+
 	//ids := [10]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-	ids, err := getIDs()
+	ids, err := getIds()
 	if err != nil {
-		log.Fatalln(err)
+		log.Println(err)
+		os.Exit(1)
 	}
 	fmt.Printf("IDs: %v\n", ids)
 
-	var wg sync.WaitGroup
-	for _, id := range ids {
-		wg.Add(1)
+	var waiter sync.WaitGroup
+	for _, currentId := range ids {
+		waiter.Add(1)
 		go func(id int) {
-			defer wg.Done()
-			p, err := getPerson(id)
+			defer waiter.Done()
+			selectedPerson, err := getPerson(id)
 			if err != nil {
 				log.Println(err)
 				return
 			}
-			fmt.Printf("ID %d: %v\n", p.ID, p)
-		}(id)
+			fmt.Printf("%d: %v\n", selectedPerson.ID, selectedPerson)
+		}(currentId)
 	}
 
-	wg.Wait()
+	waiter.Wait()
 	elapsed := time.Since(start)
-	fmt.Printf("Total time: %v", elapsed)
+	fmt.Printf("Total time: %v\n", elapsed)
 }
 
 // func fetchAndDisplay(id int, wg *sync.WaitGroup) {
 // 	defer wg.Done()
-// 	p, err := getPerson(id)
+// 	selectedPerson, err := getPerson(id)
 // 	if err != nil {
 // 		log.Println(err)
 // 		return
 // 	}
-// 	fmt.Printf("ID %d: %v\n", p.ID, p)
+// 	fmt.Printf("%d: %v\n", selectedPerson.ID, selectedPerson)
 // }
 
-func getIDs() ([]int, error) {
+func getIds() ([]int, error) {
 	url := "http://localhost:9874/people/ids"
 	resp, err := http.Get(url)
 	if err != nil {

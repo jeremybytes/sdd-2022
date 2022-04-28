@@ -25,11 +25,11 @@ app.MapGet("/people/{id}",
     async (int id, IPeopleProvider provider) =>
     {
         await Task.Delay(1000);
-        var result = provider.GetPerson(id);
-        return result switch
+        var person = provider.GetPerson(id);
+        return person switch
         {
             null => Results.NoContent(),
-            _ => Results.Json(result)
+            _ => Results.Json(person)
         };
     })
     .WithName("GetPerson");
