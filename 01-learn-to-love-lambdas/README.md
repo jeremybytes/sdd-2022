@@ -3,7 +3,7 @@ Learn to Love Lambdas in C# (and LINQ, Too!)
 
 Abstract  
 ----------
-Lambda expressions can be confusing the first time you walk up to them. But once you get to know them, you’ll see that they are a great addition to your toolbox. Used properly, they can add elegance and simplicity to your code. And some .NET constructs (such as LINQ) lend themselves to lambda expressions. We’ll take a look at how lambda expressions work and see them in action.
+Lambda expressions in C# can be confusing the first time you walk up to them. But once you get to know them, you’ll see that they are a great addition to your toolbox. Used properly, they can add elegance and simplicity to your code. And some .NET constructs (such as LINQ) lend themselves to lambda expressions. In addition, lambdas let us scope our variables more appropriately with captured variables. We’ll take a look at how lambda expressions work and see them in action. We’ll also see how LINQ can help us move from imperative programming to declarative programming (a gateway to functional-style programming).
 
 Projects
 ----------

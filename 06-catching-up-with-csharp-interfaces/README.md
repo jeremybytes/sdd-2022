@@ -3,7 +3,7 @@ Catching Up with Interfaces in C#: What You Know is Probably Wrong
 
 Abstract
 ----------
-C# 8 brings new features to interfaces, including default implementation, access modifiers, and static members. We'll look at these new features, and see where they are useful and where they should be avoided. The world of interfaces has changed; the line between interfaces and abstract classes has blurred; and C# now has multiple inheritance. With some practical tips, "gotchas", and plenty of examples, we'll see how to use these features effectively (and safely) in our code.  
+C# 8 brought new features to interfaces, including default implementation, access modifiers, and static members. We'll look at these new features, and see where they are useful and where they should be avoided. The world of interfaces has changed; the line between interfaces and abstract classes has blurred; and C# now has multiple inheritance. With some practical tips, "gotchas", and plenty of examples, we'll see how to use these features effectively (and safely) in our code.  
 
 This repository contains slides and code samples for a live presentation. Details of the various topics can be found in the accompanying articles.
 
