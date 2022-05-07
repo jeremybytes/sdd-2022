@@ -6,7 +6,7 @@ namespace PeopleViewer.Presentation;
 
 public class PeopleViewModel : INotifyPropertyChanged
 {
-    protected IPersonReader DataReader;
+    protected readonly IPersonReader DataReader;
 
     private IEnumerable<Person> _people = new List<Person>();
 
