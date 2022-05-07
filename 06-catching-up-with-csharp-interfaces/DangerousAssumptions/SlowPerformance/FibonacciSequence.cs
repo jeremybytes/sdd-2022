@@ -7,6 +7,7 @@ public class FibonacciSequence : IEnumerable<int>
     public IEnumerator<int> GetEnumerator()
     {
         var value = (current: 0, next: 1);
+        Console.WriteLine();
 
         bool notOverflowed = true;
         while (notOverflowed)
@@ -18,6 +19,7 @@ public class FibonacciSequence : IEnumerable<int>
                 // has overflowed.
                 notOverflowed = false;
             }
+            Console.Write($"{value.current} ");
             yield return value.current;
         }
     }

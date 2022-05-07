@@ -7,11 +7,9 @@ class Program
     static void Main(string[] args)
     {
         // Private Members
-        ICalendarItem calendarEvent = new CalendarEvent("Dwayne's Graduation", DateTime.Today.AddMonths(1));
-        DisplayCalendarItem(calendarEvent);
-
-        ICalendarItem reminder = new CalendarReminder("Send birthday card to Penny", new TimeSpan(5, 30, 0));
-        DisplayCalendarItem(reminder);
+        IDistanceCalculator calculator = new SquareDistanceCalculator();
+        int distance = calculator.CalculateMetadistance((1, 7), (3, 1));
+        Console.WriteLine($"Metadistance = {distance}");
 
         // Protected Members
         IInventoryController controller = new FakeInventoryController();
@@ -47,17 +45,6 @@ class Program
             Console.WriteLine("---");
             count++;
         }
-        Console.WriteLine("=======================");
-    }
-
-    static void DisplayCalendarItem(ICalendarItem calendarEvent)
-    {
-        Console.WriteLine("=======================");
-        Console.WriteLine("Calendar Item");
-        Console.WriteLine($"Name: {calendarEvent.Name}");
-        Console.WriteLine($"Start Time: {calendarEvent.StartTime:s}");
-        Console.WriteLine($"Type: {calendarEvent.ItemType}");
-        Console.WriteLine($"Type: {calendarEvent.ItemTypeDescription}");
         Console.WriteLine("=======================");
     }
 }
