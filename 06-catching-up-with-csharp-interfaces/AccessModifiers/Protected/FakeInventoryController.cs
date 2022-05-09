@@ -14,8 +14,8 @@ public class FakeInventoryController : IInventoryController
             inventory.Add(item.Id, 1);
     }
 
-    // Protected interface members must be implemented explicitly.
-    // Non-explicit implementation is not allowed.
+    // Protected interface members can be implemented explicitly.
+    // Non-explicit implementation as "public" is also allowed.
     InventoryItem IInventoryController.PullInventoryItem(int id)
     {
         if (inventory.ContainsKey(id) && inventory[id] > 0)

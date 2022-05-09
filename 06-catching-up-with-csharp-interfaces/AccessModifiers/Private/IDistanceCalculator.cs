@@ -14,7 +14,7 @@ public interface IDistanceCalculator
     }
 
     // Private abstract members not allowed
-    // private CalendarItemType DefaultType { get; }
+    //private int DirectDistance((int, int) point1, (int, int) point2)
 
     // Private members must have default implementation
     private int DirectDistance((int, int) point1, (int, int) point2)
