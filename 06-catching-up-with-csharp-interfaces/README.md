@@ -1,14 +1,30 @@
-Catching Up with Interfaces in C#: What You Know is Probably Wrong
-=========================
+# Catching Up with Interfaces in C#: What You Know is Probably Wrong
 
-Abstract
-----------
+## Abstract
+
 C# 8 brought new features to interfaces, including default implementation, access modifiers, and static members. We'll look at these new features, and see where they are useful and where they should be avoided. The world of interfaces has changed; the line between interfaces and abstract classes has blurred; and C# now has multiple inheritance. With some practical tips, "gotchas", and plenty of examples, we'll see how to use these features effectively (and safely) in our code.  
 
 This repository contains slides and code samples for a live presentation. Details of the various topics can be found in the accompanying articles.
 
-Resources
------------
+## Summary of Recommendations and Opinions
+
+**Recommendation**  
+* When calling interface members, use the interface type.
+* Default implementations should only reference other interface members.
+* Know the capabilities of your mocking framework
+
+**Observation**  
+* Default implementation is good for calculated properties. (And not much else for properties.)
+
+**My Opinion**  
+* If code inside an interface is complex enough that it requires this type of refactoring (private members), maybe it is not appropriate for it to be part of an interface.
+* Stick with "public and "private" access modifiers.
+* Compatability with libraries is a good reason to support default implementation (however, I would like to see the use limited as much as possible).
+* Because default implementations should call existing members, it is difficult to come up with scenarios that are not trivial.
+* Interface inheritance supports a more controlled way of extending an interface.
+* I like the idea of mix-ins, but I wish that it was implemented with a different construct.
+
+## Resources
 
 **Presentation Recordings:**  
 * [Tulsa .NET User Group](http://usergroup.tv/videos/whats-new-in-c-8-interfaces-and-how-to-use-them-effectively) - Recorded Jul 23, 2020  
