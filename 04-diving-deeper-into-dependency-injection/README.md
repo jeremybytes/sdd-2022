@@ -11,9 +11,9 @@ Code samples and slides are included in this repository.
 The following connects the topics with the sample code.  
 
 **Constructor Injection**  
-* [PeopleController.cs](/MainDemo/PeopleViewer/Controllers/PeopleController.cs) - Web application controller
-* [PeopleViewerWindow.xaml.cs](/MainDemo/PeopleViewer.View/PeopleViewerWindow.xaml.cs) - Desktop application main window
-* [PeopleViewModel.cs](/MainDemo/PeopleViewer.Presentation/PeopleViewModel.cs) - Desktop application view model
+* [PeopleController.cs](/04-diving-deeper-into-dependency-injection/MainDemo/PeopleViewer/Controllers/PeopleController.cs) - Web application controller
+* [PeopleViewerWindow.xaml.cs](/04-diving-deeper-into-dependency-injection/MainDemo/PeopleViewer.View/PeopleViewerWindow.xaml.cs) - Desktop application main window
+* [PeopleViewModel.cs](/04-diving-deeper-into-dependency-injection/MainDemo/PeopleViewer.Presentation/PeopleViewModel.cs) - Desktop application view model
 
 **Property Injection**  
 * [CSVReader.cs](/MainDemo/PersonDataReader.CSV/CSVReader.cs) - CSV File data reader  
